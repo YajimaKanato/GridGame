@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5997202026035145377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &818375390162360643
@@ -67,7 +68,8 @@ MeshRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 2100000, guid: 5c0d5e1c25303274ea7dfd13a91e3836, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,6 +126,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b751efb91234b469f91c1ba29de64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GridGame::GridGame.GridBlock
-  _material: {fileID: 0}
+  _render: {fileID: 2299164637506089363}
+  _spawnEffect: {fileID: 6015523482389007038}
   _baseColor: {r: 1, g: 1, b: 1, a: 0}
   _energyColor: {r: 1, g: 1, b: 1, a: 0}
+  _timeOffset: 0
+--- !u!1001 &7431016574156440864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6819225908337971641}
+    m_Modifications:
+    - target: {fileID: 3635312701873356141, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_Name
+      value: SpawnEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+--- !u!4 &5997202026035145377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3754332223905558401, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+  m_PrefabInstance: {fileID: 7431016574156440864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6015523482389007038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3772653710307741598, guid: 738b52f92408b6f4da2f12c7e7add560, type: 3}
+  m_PrefabInstance: {fileID: 7431016574156440864}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4642bb1587442be44a1735eb8a5c4e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GridGame::GridGame.SpawnEffect
