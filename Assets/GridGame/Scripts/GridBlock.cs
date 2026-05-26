@@ -37,6 +37,7 @@ namespace GridGame
             _render.GetPropertyBlock(_matBlock);
             _matBlock?.SetColor("_BaseColor", _baseColor);
             _matBlock?.SetColor("_EnergyColor", _energyColor);
+            _matBlock?.SetFloat("_WaitTime", _stopTime);
             _render.SetPropertyBlock(_matBlock);
         }
 

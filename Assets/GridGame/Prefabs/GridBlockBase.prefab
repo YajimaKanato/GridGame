@@ -131,6 +131,7 @@ MonoBehaviour:
   _baseColor: {r: 1, g: 1, b: 1, a: 0}
   _energyColor: {r: 1, g: 1, b: 1, a: 0}
   _timeOffset: 0
+  _stopTime: 2
 --- !u!1001 &7431016574156440864
 PrefabInstance:
   m_ObjectHideFlags: 0
