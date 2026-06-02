@@ -11,7 +11,6 @@ namespace GridGame
         [SerializeField] float _timeOffset;
         [SerializeField] float _stopTime;
         MaterialPropertyBlock _matBlock;
-        float _delta;
 
         private void Awake()
         {
