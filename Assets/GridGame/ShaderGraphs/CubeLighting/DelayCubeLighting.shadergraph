@@ -1086,8 +1086,8 @@
     "m_ObjectId": "39b14bec45714d96915da82e91f35df4",
     "m_Title": "じんわりと光らせる",
     "m_Position": {
-        "x": -232.0,
-        "y": -126.4000244140625
+        "x": -232.00003051757813,
+        "y": -126.40000915527344
     }
 }
 
@@ -1606,7 +1606,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.0,
+    "m_Value": 1.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -2211,7 +2211,7 @@
     "m_ObjectId": "a2810e0230be44d4aef4f539afad1088",
     "m_Title": "任意の時間待機した光の流れ",
     "m_Position": {
-        "x": -460.0,
+        "x": -460.0000305175781,
         "y": -693.6000366210938
     }
 }
@@ -2818,8 +2818,8 @@
     "m_ObjectId": "d324eb242b6c404c98c560d8e37debc5",
     "m_Title": "基本の形",
     "m_Position": {
-        "x": -513.5999755859375,
-        "y": -266.3999938964844
+        "x": -513.6000366210938,
+        "y": -266.4000244140625
     }
 }
 
