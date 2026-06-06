@@ -5,26 +5,22 @@ namespace GridGame
 {
     public class PlayerInput : MonoBehaviour
     {
-        [SerializeField] InputActionAsset _actionAsset;
-        InputActionMap _testMap;
-        InputAction _targetAct;
-        InputAction _spawnAct;
+        TurnManager _turnManager;
+        Vector2 _targetPos;
         RaycastHit _hit;
         bool _isHit;
 
-        private void Awake()
+        public void Init(TurnManager turnManager)
         {
-            _testMap = _actionAsset.FindActionMap("Test");
-            _targetAct = _testMap.FindAction("Target");
-            _spawnAct = _testMap.FindAction("Spawn");
-
-            _testMap.Enable();
+            if (turnManager == null)
+                throw new System.ArgumentNullException();
+            _turnManager = turnManager;
         }
 
         private void Update()
         {
             // マウス座標取得
-            Vector2 mousePos = _targetAct.ReadValue<Vector2>();
+            Vector2 mousePos = _targetPos;
 
             // Ray生成
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
@@ -36,30 +32,22 @@ namespace GridGame
             _isHit = Physics.Raycast(ray, out _hit, 100f);
         }
 
-        private void OnEnable()
+        /// <summary>
+        /// PlayerInputから呼び出されるマウスの場所をとるメソッド
+        /// </summary>
+        /// <param name="input"></param>
+        void OnTarget(InputValue input)
         {
-            RegisterAction();
+            _targetPos = input.Get<Vector2>();
         }
 
-        private void OnDisable()
-        {
-            UnregisterAction();
-        }
-
-        void RegisterAction()
-        {
-            _spawnAct.started += Spawn;
-        }
-
-        void UnregisterAction()
-        {
-            _spawnAct.started -= Spawn;
-        }
-
-        void Spawn(InputAction.CallbackContext ctx)
+        /// <summary>
+        /// PlayerInputから呼び出されるスポーンメソッド
+        /// </summary>
+        void OnSpawn()
         {
             if (!_isHit || !_hit.collider.TryGetComponent<GridBlock>(out var grid)) return;
-            grid.Spawn();
+            grid.Spawn(_turnManager.CurrentTurn);
         }
     }
 }
