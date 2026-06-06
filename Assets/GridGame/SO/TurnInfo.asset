@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fff7e0ccf94f74abae0d93881fc377, type: 3}
+  m_Name: TurnInfo
+  m_EditorClassIdentifier: GridGame::GridGame.TurnInfo
+  _turnStats:
+  - _turnType: 0
+    _gridColor: {r: 0, g: 0.28655386, b: 1, a: 0}
+    _energyColor: {r: 0, g: 0.7031503, b: 1, a: 0}
+    _spawnEffectColor: {r: 0, g: 0.9225354, b: 1, a: 0}
+  - _turnType: 1
+    _gridColor: {r: 1, g: 0, b: 0.8283677, a: 0}
+    _energyColor: {r: 1, g: 0.2396226, b: 0.6881794, a: 0}
+    _spawnEffectColor: {r: 1, g: 0.28490567, b: 0.57037026, a: 0}
