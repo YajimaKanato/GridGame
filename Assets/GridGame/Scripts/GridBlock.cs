@@ -5,7 +5,7 @@ namespace GridGame
     public class GridBlock : MonoBehaviour
     {
         [SerializeField] Renderer _render;
-        [SerializeField] SpawnEffect _spawnEffect;
+        [SerializeField] SpawnEffect _spawn;
         [SerializeField] Color _baseColor;
         [SerializeField] Color _energyColor;
         [SerializeField] float _timeOffset;
@@ -15,20 +15,18 @@ namespace GridGame
         private void Awake()
         {
             _matBlock = new MaterialPropertyBlock();
-            _spawnEffect?.gameObject.SetActive(false);
             SetupMaterial();
         }
 
         private void Update()
         {
-
             UpdateMaterial();
         }
 
         [ContextMenu("Spawn")]
         public void Spawn()
         {
-            _spawnEffect?.gameObject?.SetActive(true);
+            _spawn?.Spawn(Color.red);
         }
 
         void SetupMaterial()
